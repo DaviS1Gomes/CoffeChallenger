@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+body{
+ background-color: var(--backgrond-maincolor);
+ font-family: 'Manrope', sans-serif;;
+}
 .main-Header{
   display: flex;
   align-items: center;
@@ -6,9 +12,28 @@
   left: 50%;
   transform: translate(-50%,-50%);
   width: 80%;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .list-Header{
  display: flex;
+ justify-content: space-around;
+ align-items: center;
+}
+
+.itemList-Header{
+ margin: 25px;
+ transition: 0.2s;
+}
+.itemList-Header a{
+ text-decoration: none;
+ color: var(--text-color);
+}
+.itemList-Header:hover,
+.itemList-Header a:hover{
+   transform: translate( 0px, -2.5px);
+   color: var(--button-color);
+   transition: 0.2s;
+   cursor: pointer;
+
 }
