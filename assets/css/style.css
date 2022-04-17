@@ -37,3 +37,31 @@ body{
    cursor: pointer;
 
 }
+
+.button-Header{
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 3px solid var(--button-color);
+  color: var(--text-color);
+  background: none;
+  padding: 11px 38px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+
+}
+
+.button-Header:hover{
+ border: 3px solid var(--button-color);
+ color: var(--text-color);
+ background-color:  var(--button-color);
+ transform: translate(0px, -5px);
+ cursor: pointer;
+ transition: 0.2s;
+
+}
+
+
