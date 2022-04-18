@@ -95,46 +95,54 @@ body{
   font-size: 25px;
   font-family: 'Fira Code', sans-serif;
 }
+#ulHeader{
+  display: flex;
+}
 
 @media only screen and (max-width: 920px){
-  #btn-mobile,
+  #main-Header{
+    border-bottom: 1px rgba(100, 100, 100, 0.8) solid;
+    padding-bottom: 10px;
+    top: 10%;
+    justify-content: space-between;
+  }
+  #ulHeader{
+    flex-direction: column;
+  }
   #title-mobile{
     display: block;
+    transition: .2s;
+  }
+  #img-Header:hover{
+    filter: none;
+  }
+  #title-mobile:hover{
+      transform: translate(0px, -2.5px);
+      transition: .2s;
   }
   #button-Header{
     display: none;
   }
-  #list-Header{
-   /* display: none;*/
+  #ulHeader{
     position: absolute;
-
-    width: 100%;
     top: 70px;
     right: 0px;
     background-color: var(--button-color);
-    height: calc(40vh - 70px);
     z-index: 1000;
     text-align: center;
     border-radius: 5px;
+    transition: .5s;
+    display: block;
+    height: 1px;
+    visibility: hidden;
   }
-  #list-Header{
-     display: none;
-     position: absolute;
  
-     width: 25%;
-     top: 45px;
-     right: 0px;
-     background-color: var(--button-color);
-     height: calc(40vh - 70px);
-     z-index: 1000;
-     text-align: center;
-     border-radius: 5px;
-     transition: .2s;
-
-   }
-
+#itemList-Header{
+  opacity: 0;
+}
    #itemList-Header a {
     position: relative;
+    width: 100%;    
   }
   
   #itemList-Header a::before {
@@ -151,22 +159,43 @@ body{
       transition: transform .3s ease-in-out;
     }
   
-    #itemList-Header a:hover::before {
+  #itemList-Header a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
   }
   #itemList-Header a:hover{
     color:black;
   }
-
-
   #title-Header{
-    width: 100%;
+    width: 280px;
   }
-  #nav-Header.active #list-Header{
-      display: inline-block;
-      transition: .2s;
-
+  #nav-Header.active #ulHeader{
+      transition: .5s;
+      visibility: visible;
+      height: 225px;
+  }
+  #nav-Header.active #ulHeader #itemList-Header{
+    animation-delay: 10s;
+    opacity: 1;
+    transition: 2.5s;
+}
+  #btn-mobile{
+    display: flex;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  #hamburguer-open{
+    display: none;
+  }
+  #nav-Header.active #hamburguer{
+    display: none;
+  }
+  #nav-Header.active #hamburguer-open{
+    display: block;
   }
  
 }
+
